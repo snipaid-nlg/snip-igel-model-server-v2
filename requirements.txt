@@ -1,3 +1,6 @@
 potassium
 torch
 transformers
+bitsandbytes
+accelerate
+peft
