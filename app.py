@@ -101,9 +101,8 @@ def handler(context: dict, request: Request) -> Response:
     for s in generation_output.sequences:
         output = tokenizer.decode(s)
         output_text = output.split("### Antwort:")[1].strip()
-        result = {"output": output_text}
         return Response(
-            json = {"outputs": result}, 
+            json = {"output": output_text}, 
             status=200
         )
     
